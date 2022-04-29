@@ -15,7 +15,7 @@
     - name: openssl
 
 
-# Installation de sshd_config Debian 11 standart
+# Vérification de sshd_config Debian 11 standart
 /avalon/ssh/sshd_config:
   file.managed:
     - name: /etc/ssh/sshd_config
@@ -26,7 +26,7 @@
     - template: jinja
 
 
-# Installation de sshd_config d'AVALON dans sshd_config.d
+# Ajout de sshd_config d'AVALON dans sshd_config.d
 /avalon/ssh/sshd_config.d/sshd_config_avalon.conf:
   file.managed:
     - name: /etc/ssh/sshd_config.d/sshd_config_avalon.conf
@@ -37,7 +37,7 @@
     - template: jinja
 
 
-# Installation de ssh_config Debian 11 standart
+# Vérification de ssh_config Debian 11 standart
 /avalon/ssh/ssh_config:
   file.managed:
     - name: /etc/ssh/ssh_config
