@@ -1,5 +1,5 @@
 # Vérification si le service ssh est activé
-/avalon/ssh/sshd_running:
+/global/ssh/sshd_running:
   service.running:
     - name: sshd
     - enable: True
@@ -10,13 +10,13 @@
 
 
 # Installation du pkg ssh
-/avalon/ssh/ssh_pkg:
+/global/ssh/ssh_pkg:
   pkg.installed:
     - name: openssl
 
 
 # Vérification de sshd_config Debian 11 standart
-/avalon/ssh/sshd_config:
+/global/ssh/sshd_config:
   file.managed:
     - name: /etc/ssh/sshd_config
     - source: salt://global/ssh/template/sshd_config
@@ -27,7 +27,7 @@
 
 
 # Ajout de sshd_config d'AVALON dans sshd_config.d
-/avalon/ssh/sshd_config.d/sshd_config_avalon.conf:
+/global/ssh/sshd_config.d/sshd_config_avalon.conf:
   file.managed:
     - name: /etc/ssh/sshd_config.d/sshd_config_avalon.conf
     - source: salt://global/ssh/template/sshd_config_avalon.conf
@@ -38,7 +38,7 @@
 
 
 # Vérification de ssh_config Debian 11 standart
-/avalon/ssh/ssh_config:
+/global/ssh/ssh_config:
   file.managed:
     - name: /etc/ssh/ssh_config
     - source: salt://global/ssh/template/ssh_config
@@ -49,7 +49,7 @@
 
 
 # Notification du bon déroulement de la configuration
-/avalon/ssh:
+/global/ssh:
   test.show_notification:
     - name: /avalon/ssh_avalon
     - text: 'SSH is OK !'

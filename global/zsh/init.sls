@@ -1,5 +1,5 @@
 # Installation du pkg tmux
-/avalon/zsh:
+/global/zsh:
   pkg.installed:
     - name: zsh
 

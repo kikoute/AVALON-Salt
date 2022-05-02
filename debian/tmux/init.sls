@@ -1,11 +1,11 @@
 # Installation du pkg tmux
-/avalon/tmux:
+/debian/tmux:
   pkg.installed:
     - name: tmux
 
 
 # Ajout du .tmux.conf personnalisé
-/avalon/tmux/.tmux.conf:
+/debian/tmux/.tmux.conf:
   file.managed:
     - name: /root/.tmux.conf
     - source: salt://debian/tmux/template/.tmux.conf

@@ -1,5 +1,5 @@
 # Modification du fichier /etc/motd
-/avalon/motd:
+/global/motd:
   file.managed:
     - name: /etc/motd
     - source: salt://global/motd/template/motd
