@@ -1,9 +1,9 @@
 base:
   '*':
-    - avalon/ssh
-    - avalon/job
-    - avalon/motd
+    - global/ssh
+    - global/job
+    - global/motd
   'os:Debian':
     - match: grain
-    - avalon/network
-    - avalon/tmux
+    - debian/network
+    - debian/tmux
