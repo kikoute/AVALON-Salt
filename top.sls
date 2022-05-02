@@ -7,3 +7,4 @@ base:
     - match: grain
     - debian/network
     - debian/tmux
+    - debian/source-list
