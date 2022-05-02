@@ -3,7 +3,7 @@ base:
     - global/ssh
     - global/job
     - global/motd
-  'os:Debian':
+  'os_family:Debian':
     - match: grain
     - debian/network
     - debian/tmux
