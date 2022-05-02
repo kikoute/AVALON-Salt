@@ -2,7 +2,7 @@
 /avalon/motd:
   file.managed:
     - name: /etc/motd
-    - source: salt://avalon/motd/template/motd
+    - source: salt://global/motd/template/motd
     - user: root
     - group: root
     - mode: 644

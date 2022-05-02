@@ -19,7 +19,7 @@
 /avalon/ssh/sshd_config:
   file.managed:
     - name: /etc/ssh/sshd_config
-    - source: salt://avalon/ssh/template/sshd_config
+    - source: salt://global/ssh/template/sshd_config
     - user: root
     - group: root
     - mode: 644
@@ -30,7 +30,7 @@
 /avalon/ssh/sshd_config.d/sshd_config_avalon.conf:
   file.managed:
     - name: /etc/ssh/sshd_config.d/sshd_config_avalon.conf
-    - source: salt://avalon/ssh/template/sshd_config_avalon.conf
+    - source: salt://global/ssh/template/sshd_config_avalon.conf
     - user: root
     - group: root
     - mode: 644
@@ -41,7 +41,7 @@
 /avalon/ssh/ssh_config:
   file.managed:
     - name: /etc/ssh/ssh_config
-    - source: salt://avalon/ssh/template/ssh_config
+    - source: salt://global/ssh/template/ssh_config
     - user: root
     - group: root
     - mode: 644
