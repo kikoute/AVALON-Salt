@@ -5,7 +5,7 @@
 
 
 # Passer en zsh par défaut
-/usr/bin/chsh
+/usr/bin/chsh:
   cmd.wait:
     - name: chsh -s /usr/bin/zsh
     - watch:
