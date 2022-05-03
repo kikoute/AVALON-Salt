@@ -7,6 +7,6 @@
 # Passer en zsh par défaut
 /usr/bin/chsh
   cmd.wait:
+    - name: chsh -s /usr/bin/zsh
     - watch:
       - pkg: zsh
-    - name: chsh -s /usr/bin/zsh
