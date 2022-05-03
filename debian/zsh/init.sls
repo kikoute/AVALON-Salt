@@ -1,5 +1,5 @@
 # Installation du pkg tmux
-/global/zsh:
+/debian/zsh:
   pkg.installed:
     - name: zsh
 
